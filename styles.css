@@ -1,0 +1,17 @@
+body {
+    height: 100vh;
+}
+
+#sketch-pad {
+    width: 50vw;
+    height: 70vh;
+    border: solid black 2px;
+    display: grid;
+    place-content: stretch;
+    align-self: center;
+
+}
+
+#sketch-pad div {
+    border: solid black 2px;
+}
