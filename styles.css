@@ -12,6 +12,11 @@ body {
 
 }
 
-#sketch-pad div {
-    border: solid black 2px;
+
+.cell {
+    border: solid rgba(0, 0, 0, 0.131) 1px;
+}
+
+.cell:hover {
+    background-color: black;
 }
