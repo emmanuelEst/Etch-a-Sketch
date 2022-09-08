@@ -23,6 +23,7 @@ function buildGrid(gridSize) {
     }
 
     sketchPad.style.cssText = `grid-template: repeat(${gridSize}, 1fr) / repeat(${gridSize}, 1fr);`;
+    createEventListeners();
 
 }
 
@@ -37,5 +38,24 @@ function destroyGrid() {
         }
     } else {
         // pass
+    }
+}
+
+// Adds event listeners
+function createEventListeners() {
+    let cells = document.querySelectorAll('.cell');
+    cells.forEach(item => {
+        item.addEventListener('click', event => {
+            fillCellOnClick(event.target);
+        })
+    })
+}
+
+// Fills cell when clicked
+function fillCellOnClick(target) {
+    if (target.style['background-color'] === 'black') { // checks to see if a cell is already filled
+        target.style['background-color'] = 'white';
+    } else {
+        target.style['background-color'] = 'black';
     }
 }
