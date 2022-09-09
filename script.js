@@ -24,6 +24,8 @@ function buildGrid(gridSize) {
 
     sketchPad.style.cssText = `grid-template: repeat(${gridSize}, 1fr) / repeat(${gridSize}, 1fr);`;
     createEventListeners();
+    // prevents 'mouseleave' from firing when the cursor leave the grid and returns again
+    sketchPad.addEventListener('mouseleave', removeMouseLeave);
 
 }
 
@@ -69,7 +71,10 @@ function createMouseLeaveListeners() {
 
 // remove 'mouseleave' event listeners
 function removeMouseLeave(event) {
-    fillCellOnClick(event); // fills the last cell when 'mouseup' fires
+    if (event.target.id != 'sketch-pad') { // prevents the grid from filling up when this is called
+        fillCellOnClick(event); // fills the last cell when 'mouseup' fires
+    }
+
     let cells = document.querySelectorAll('.cell');
     cells.forEach(item => {
         item.removeEventListener('mouseleave', fillCellOnClick)
