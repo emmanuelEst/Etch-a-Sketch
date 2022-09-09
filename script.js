@@ -53,10 +53,11 @@ function createEventListeners() {
 
 // Fills cell when clicked
 function fillCellOnClick(event) {
-    if (event.target.style['background-color'] === 'black') { // checks to see if a cell is already filled
-        event.target.style['background-color'] = 'white';
-    } else {
+    if (draw === true) {
         event.target.style['background-color'] = 'black';
+    }
+    if (draw === false) {
+        event.target.style['background-color'] = 'white';
     }
 }
 
@@ -80,3 +81,6 @@ function removeMouseLeave(event) {
         item.removeEventListener('mouseleave', fillCellOnClick)
     })
 }
+
+// set to drawing or erasing 
+let draw = true;
