@@ -45,17 +45,33 @@ function destroyGrid() {
 function createEventListeners() {
     let cells = document.querySelectorAll('.cell');
     cells.forEach(item => {
-        item.addEventListener('click', event => {
-            fillCellOnClick(event.target);
-        })
+        item.addEventListener('mousedown', createMouseLeaveListeners);
     })
 }
 
 // Fills cell when clicked
-function fillCellOnClick(target) {
-    if (target.style['background-color'] === 'black') { // checks to see if a cell is already filled
-        target.style['background-color'] = 'white';
+function fillCellOnClick(event) {
+    if (event.target.style['background-color'] === 'black') { // checks to see if a cell is already filled
+        event.target.style['background-color'] = 'white';
     } else {
-        target.style['background-color'] = 'black';
+        event.target.style['background-color'] = 'black';
     }
+}
+
+// create mouseleave listeners
+function createMouseLeaveListeners() {
+    let cells = document.querySelectorAll('.cell');
+    cells.forEach(item => {
+        item.addEventListener('mouseleave', fillCellOnClick)
+        item.addEventListener('mouseup', removeMouseLeave);
+    })
+}
+
+// remove 'mouseleave' event listeners
+function removeMouseLeave(event) {
+    fillCellOnClick(event); // fills the last cell when 'mouseup' fires
+    let cells = document.querySelectorAll('.cell');
+    cells.forEach(item => {
+        item.removeEventListener('mouseleave', fillCellOnClick)
+    })
 }
