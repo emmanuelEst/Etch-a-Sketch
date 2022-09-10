@@ -1,15 +1,13 @@
-// Takes user input to build a specified number of rows and columns
-function setColumnsAndRows() {
-    let userInput = prompt('How many columns and rows do you want to display? (1-100)', '');
+// Takes slider input to build a specified number of rows and columns
+let slider = document.querySelector('#slider');
+let rowAndColumnsDisplayText = document.querySelector('#rows-columns-display-text');
+slider.onchange = function () {
+    buildGrid(this.value);
+};
 
-    if (userInput === '') {
-        alert('Value not taken')
-    } else if (userInput > 100 || userInput < 1) {
-        alert('Columns and Rows need to be between numbers 1 through 100')
-    } else {
-        buildGrid(Math.floor(userInput));
-    }
-}
+slider.addEventListener('input', () => { // Displays number of rows and columns based on slider value
+    rowAndColumnsDisplayText.innerHTML = `${slider.value}x${slider.value}`;
+});
 
 // builds rows and columns
 function buildGrid(gridSize) {
