@@ -14,11 +14,14 @@
         <input type="range" min="1" max="64" value="16" id="slider" name="slider">
         <div id="rows-columns-display-text">16x16</div>
     </div>
-    <div id="sketch-pad"></div>
-
-    <button id="erase-btn" onclick="draw = false">Erase</button>
-    <button id="draw-btn" onclick="draw = true">Draw</button>
-    <button id="reset-btn" onclick="resetGrid()">Reset Grid</button>
+    <div class="sketch-pad-buttons">
+        <div id="sketch-pad"></div>
+        <div class="buttons">
+            <button id="erase-btn" onclick="draw = false">Erase</button>
+            <button id="draw-btn" onclick="draw = true">Draw</button>
+            <button id="reset-btn" onclick="resetGrid()">Reset Grid</button>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 
