@@ -63,8 +63,8 @@ body {
 }
 
 #sketch-pad {
-    width: 500px;
-    height: 500px;
+    aspect-ratio: 1;
+    width: 600px;
     border: solid black 4px;
     display: grid;
     place-content: stretch;
