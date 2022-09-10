@@ -1,3 +1,5 @@
+buildGrid(16); // default grid dimensions
+
 // Takes slider input to build a specified number of rows and columns
 let slider = document.querySelector('#slider');
 let rowAndColumnsDisplayText = document.querySelector('#rows-columns-display-text');
@@ -8,6 +10,11 @@ slider.onchange = function () {
 slider.addEventListener('input', () => { // Displays number of rows and columns based on slider value
     rowAndColumnsDisplayText.innerHTML = `${slider.value}x${slider.value}`;
 });
+
+// reset grid 
+function resetGrid() {
+    buildGrid(slider.value);
+}
 
 // builds rows and columns
 function buildGrid(gridSize) {
