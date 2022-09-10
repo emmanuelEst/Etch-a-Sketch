@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    background-color: var(--Medium-Purple);
+    background-color: var(--Medium-Slate-Blue);
 }
 
 #title {
@@ -27,6 +27,16 @@ body {
     margin-bottom: 10px;
 
     color: white;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    color: white;
+
+    padding: 15px 10px;
+    margin-bottom: 15px;
 }
 
 #sketch-pad {
