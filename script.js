@@ -62,7 +62,7 @@ function fillCellOnClick(event) {
         event.target.style['background-color'] = 'black';
     }
     if (draw === false) {
-        event.target.style['background-color'] = 'white';
+        event.target.style['background-color'] = 'var(--Champagne-Pink)';
     }
 }
 
