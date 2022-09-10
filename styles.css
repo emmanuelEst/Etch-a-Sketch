@@ -39,10 +39,19 @@ body {
     margin-bottom: 15px;
 }
 
+.slider-text {
+    font-size: 20px;
+}
+
+#rows-columns-display-text {
+    width: 50px;
+}
+
 #slider {
     -webkit-appearance: none;
     background: transparent;
     cursor: pointer;
+    width: 200px;
 }
 
 #slider::-webkit-slider-runnable-track {
