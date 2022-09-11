@@ -36,7 +36,6 @@ body {
     color: white;
 
     padding: 15px 10px;
-    margin-bottom: 15px;
 }
 
 .slider-text {
@@ -69,6 +68,23 @@ body {
     width: 10px;
     border-radius: 3px;
     outline: solid 2px white;
+}
+
+.buttons {
+    margin-bottom: 15px;
+    display: flex;
+    column-gap: 50px;
+}
+
+.button {
+    appearance: none;
+    background-color: var(--Champagne-Pink);
+    color: black;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 16px;
+    border: solid 1px black;
+    cursor: pointer;
 }
 
 #sketch-pad {
