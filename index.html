@@ -9,17 +9,18 @@
 
 <body>
     <h1 id="title">Etch-a-Sketch</h1>
-    <div class="slider-container">
-        <div class="slider-text">Select the number of rows and columns: </div>
-        <input type="range" min="1" max="64" value="16" id="slider" name="slider">
-        <div id="rows-columns-display-text" class="slider-text">16x16</div>
-    </div>
-    <div class="buttons">
-        <button id="erase-btn" class="button" onclick="draw = false">Erase</button>
-        <button id="draw-btn" class="button" onclick="draw = true">Draw</button>
-        <button id="reset-btn" class="button" onclick="resetGrid()">Reset Grid</button>
-    </div>
-    <div class="sketch-pad-buttons">
+    <div id="container">
+        <div class="slider-container">
+            <div class="slider-text">Select the number of rows and columns: </div>
+            <input type="range" min="1" max="64" value="16" id="slider" name="slider">
+            <div id="rows-columns-display-text" class="slider-text">16x16</div>
+        </div>
+        <div class="buttons">
+            <button id="erase-btn" class="button" onclick="draw = false">Erase</button>
+            <button id="draw-btn" class="button" onclick="draw = true">Draw</button>
+            <button id="reset-btn" class="button" onclick="resetGrid()">Reset Grid</button>
+        </div>
+
         <div id="sketch-pad"></div>
     </div>
     <script src="./script.js"></script>
