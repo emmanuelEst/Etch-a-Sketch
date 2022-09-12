@@ -97,6 +97,10 @@ body {
     cursor: pointer;
 }
 
+#color-well {
+    background-color: var(--Champagne-Pink);
+}
+
 #sketch-pad {
     aspect-ratio: 1;
     width: 600px;

@@ -56,10 +56,19 @@ function createEventListeners() {
     })
 }
 
+// Color Picker
+function changeFillColor(event) {
+    colorSelected = event.target.value;
+}
+const colorWell = document.querySelector('#color-well');
+colorWell.addEventListener('input', changeFillColor);
+
+let colorSelected = '#000000' // Default color
+
 // Fills cell when clicked
 function fillCellOnClick(event) {
     if (draw === true) {
-        event.target.style['background-color'] = 'black';
+        event.target.style['background-color'] = `${colorSelected}`;
     }
     if (draw === false) {
         event.target.style['background-color'] = 'var(--Champagne-Pink)';
