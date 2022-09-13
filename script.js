@@ -98,3 +98,32 @@ function removeMouseLeave(event) {
 
 // set to drawing or erasing 
 let draw = true;
+const eraseBtn = document.querySelector('#erase-btn');
+const drawBtn = document.querySelector('#draw-btn');
+
+eraseBtn.addEventListener('click', setToolFeedback);
+drawBtn.addEventListener('click', setToolFeedback);
+
+function setToolFeedback() {
+    if (draw === true) {
+        drawBtn.style["background-color"] = 'var(--Medium-Slate-Blue)';
+        drawBtn.style.color = 'white';
+        drawBtn.style['box-shadow'] = '2px 2px 20px 2px var(--Champagne-Pink)';
+
+
+        eraseBtn.style["background-color"] = 'var(--Champagne-Pink)'
+        eraseBtn.style.color = 'black'
+        eraseBtn.style['box-shadow'] = 'none';
+    }
+    if (draw === false) {
+        drawBtn.style["background-color"] = 'var(--Champagne-Pink)';
+        drawBtn.style.color = 'black';
+        drawBtn.style['box-shadow'] = 'none';
+
+        eraseBtn.style["background-color"] = 'var(--Medium-Slate-Blue)';
+        eraseBtn.style.color = 'white';
+        eraseBtn.style['box-shadow'] = '2px 2px 20px 2px var(--Champagne-Pink)';
+    }
+}
+
+setToolFeedback();
