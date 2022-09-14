@@ -1,3 +1,5 @@
+const sketchPad = document.querySelector('#sketch-pad');
+
 buildGrid(16); // default grid dimensions
 
 // Takes slider input to build a specified number of rows and columns
@@ -18,7 +20,6 @@ function resetGrid() {
 
 // builds rows and columns
 function buildGrid(gridSize) {
-    let sketchPad = document.querySelector('#sketch-pad');
     let newDiv;
     destroyGrid(); // removes any previous grid set
     for (let i = 1; i <= (gridSize ** 2); i++) {
@@ -37,7 +38,6 @@ function buildGrid(gridSize) {
 // Destroys any current set grid
 function destroyGrid() {
     let cells = document.querySelectorAll('.cell');
-    let sketchPad = document.querySelector('#sketch-pad');
 
     if (cells.length != 0) {
         while (sketchPad.firstChild) {
