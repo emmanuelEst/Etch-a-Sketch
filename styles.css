@@ -15,17 +15,19 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    background-color: var(--Medium-Slate-Blue);
+    /* background-color: var(--Medium-Slate-Blue); */
 }
 
 #title {
     font-family: Sacramento, sans-serif;
-    font-size: 50px;
+    font-size: 55px;
+    text-align: center;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
-    color: white;
+    color: var(--Medium-Slate-Blue);
 }
 
 #container {
