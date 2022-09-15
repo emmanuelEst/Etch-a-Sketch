@@ -65,7 +65,7 @@ body {
 }
 
 #slider::-webkit-slider-runnable-track {
-    background: var(--Champagne-Pink);
+    background: var(--Mauve);
     border-radius: 10px;
     height: 10px;
 }
@@ -90,7 +90,7 @@ body {
 
 .button {
     appearance: none;
-    background-color: var(--Champagne-Pink);
+    background-color: var(--Mauve);
     color: black;
     border-radius: 5px;
     width: 100px;
@@ -99,8 +99,14 @@ body {
     cursor: pointer;
 }
 
+.button-active {
+    background-color: var(--Medium-Slate-Blue);
+    color: white;
+}
+
 #color-well {
-    background-color: var(--Champagne-Pink);
+    background-color: var(--Mauve);
+    cursor: pointer;
 }
 
 #sketch-pad {
@@ -115,7 +121,7 @@ body {
 
 .cell {
     border: solid rgba(0, 0, 0, 0.131) 1px;
-    background-color: var(--Champagne-Pink);
+    background-color: whitesmoke;
 }
 
 .cell:hover {

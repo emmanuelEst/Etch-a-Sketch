@@ -71,7 +71,7 @@ function fillCellOnClick(event) {
         event.target.style['background-color'] = `${colorSelected}`;
     }
     if (draw === false) {
-        event.target.style['background-color'] = 'var(--Champagne-Pink)';
+        event.target.style['background-color'] = 'whitesmoke';
     }
 }
 
@@ -106,23 +106,18 @@ drawBtn.addEventListener('click', setToolFeedback);
 
 function setToolFeedback() {
     if (draw === true) {
-        drawBtn.style["background-color"] = 'var(--Medium-Slate-Blue)';
-        drawBtn.style.color = 'white';
-        drawBtn.style['box-shadow'] = '2px 2px 20px 2px var(--Champagne-Pink)';
+        drawBtn.classList.add('button-active');
+        drawBtn.textContent = 'Drawing';
 
-
-        eraseBtn.style["background-color"] = 'var(--Champagne-Pink)'
-        eraseBtn.style.color = 'black'
-        eraseBtn.style['box-shadow'] = 'none';
+        eraseBtn.classList.remove('button-active');
+        eraseBtn.textContent = 'Erase';
     }
     if (draw === false) {
-        drawBtn.style["background-color"] = 'var(--Champagne-Pink)';
-        drawBtn.style.color = 'black';
-        drawBtn.style['box-shadow'] = 'none';
+        drawBtn.classList.remove('button-active');
+        drawBtn.textContent = 'Draw';
 
-        eraseBtn.style["background-color"] = 'var(--Medium-Slate-Blue)';
-        eraseBtn.style.color = 'white';
-        eraseBtn.style['box-shadow'] = '2px 2px 20px 2px var(--Champagne-Pink)';
+        eraseBtn.classList.add('button-active');
+        eraseBtn.textContent = 'Erasing';
     }
 }
 
